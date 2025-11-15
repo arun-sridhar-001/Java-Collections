@@ -35,7 +35,7 @@ public class EmployeeManagementService {
         inputList.add(employee);
         inputList.add(employee1);
 
-        System.out.println("Employee Details Confirmation, Press Y for store the data");
+        System.out.println("Employee Details Confirmation for saving, Press Y for store the data");
         System.out.println(employee);
         System.out.println(employee1);
 

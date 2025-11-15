@@ -50,6 +50,6 @@ public class EmployeeServiceImpl implements EmployeeService{
                 return employee1;
             }
         }
-        throw new RuntimeException("Id Not Found name: "+ name);
+        throw new RuntimeException("Name Not Found name: "+ name);
     }
 }
