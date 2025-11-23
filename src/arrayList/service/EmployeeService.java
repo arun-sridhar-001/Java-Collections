@@ -15,4 +15,6 @@ public interface EmployeeService {
     Employee remove(int id);
 
     Employee findByName(String name);
+
+    String findSecondLargestSalary();
 }
