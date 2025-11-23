@@ -72,13 +72,39 @@ public class JavaEightFeatures {
 
         System.out.println("<<<<<<<<<<<<<<<<<<<<<<<<<<-----------Optional Class ----------------------------->>>>>>>>>>>>>");
 
+        List<String> list = Arrays.asList("Arun", "Vinoth", "MahaDevi", "Madan raj", "Deepak");
 
+        String val = list.stream()
+                .map(s -> s.toUpperCase())
+                .findFirst().orElse(null);
 
+        String vals = Optional.ofNullable(val).orElse("");
+        System.out.println(vals);
 
+        Optional<String> reversed = Optional.empty();
+
+        if(true) {
+            reversed = list.stream()
+                    .sorted(Collections.reverseOrder())
+                    .findFirst();
+        }
+
+        if(reversed.isPresent()) {
+            System.out.println(reversed.get().toUpperCase());
+            System.out.println(reversed.get().equals("Vinoth"));
+
+        }
 
 
         // Array Stream
-//        Arrays.stream(arr)
-//                .forEach(i -> System.out.print(i+ " "));
+        Arrays.stream(arr)
+                .forEach(i -> System.out.print(i+ " "));
+
+        System.out.println();
+        List<Integer> newList = List.of(1,2,3,4,5,6,6);
+
+        newList.stream()
+                .limit(3)
+                .forEach(System.out::print);
     }
 }
