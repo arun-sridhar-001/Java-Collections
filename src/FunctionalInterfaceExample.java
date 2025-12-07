@@ -5,7 +5,7 @@ public class FunctionalInterfaceExample {
 //        calculator.addition(10,20);
 
 
-        // Ignore -> Access Modifier, return type, method name, {} replace as ->, return key word not enough
+        // Ignore -> Access Modifier, return type, method name, {} replace as ->, return key word not needed
 
         Add add = (n1,  n2) -> n1 + n2;
 
