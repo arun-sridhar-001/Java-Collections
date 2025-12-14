@@ -100,6 +100,9 @@ public class EmployeeManagementService {
         for(Employee e : employeeList) {
             System.out.println(e);
         }
+
+//      second-largest user salary
+        System.out.println("Second largest user salary" + service.findSecondLargestSalary());
     }
 
 //    private static Employee showMenu() {

@@ -3,6 +3,7 @@ package arrayList.service;
 import arrayList.model.Employee;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 
@@ -75,5 +76,16 @@ public class EmployeeServiceImpl implements EmployeeService{
 //            }
 //        }
 //        throw new RuntimeException("Name Not Found name: "+ name);
+    }
+
+//  Second-larget salary
+    public String findSecondLargestSalary() {
+        return  employeeList
+                .stream()
+                .sorted(Comparator.comparingDouble(Employee::getSalary).reversed())
+                .skip(1)
+                .map(Employee::getName)
+                .findFirst()
+                .orElseThrow( () -> new RuntimeException("Employee Not Found"));
     }
 }
